@@ -1,0 +1,47 @@
+{
+  "tag": "bootstrap-2026-10-26",
+  "title": "Verified production installers — 2026-10-26",
+  "assets": [
+    {
+      "application": "portal-encomendas",
+      "environment": "production",
+      "platform": "windows",
+      "packageId": "portal_encomendas",
+      "name": "Setup-Portal-de-Encomendas-Real-v0.1.17-19.exe",
+      "url": "https://xfslinagzpbzoyfhhery.supabase.co/storage/v1/object/public/app-updates/pe/production/windows/Setup-Portal-de-Encomendas-Real-v0.1.17-19.exe",
+      "size": 38223360,
+      "sha256": "19d5e7d57420c58acb57fe9a942ebd70a6a8c810f827c3b0f93ec20168b7681d"
+    },
+    {
+      "application": "portal-encomendas",
+      "environment": "production",
+      "platform": "android",
+      "packageId": "pt.axelkleinsteuber.portal_encomendas",
+      "name": "Portal-de-Encomendas-Real-Android-v0.1.17-19.apk",
+      "url": "https://xfslinagzpbzoyfhhery.supabase.co/storage/v1/object/public/app-updates/pe/production/android/Portal-de-Encomendas-Real-Android-v0.1.17-19.apk",
+      "size": 25722953,
+      "sha256": "7172869e706e9a07bc15914bfc3ccf9bd01d7e042464d7e8eef1575de0067c62"
+    },
+    {
+      "application": "gestao-comercial-v7",
+      "environment": "production",
+      "platform": "windows",
+      "packageId": "gestao_comercial",
+      "name": "Setup-Gestao-Comercial-Real-v7.0.35-212.exe",
+      "url": "https://xfslinagzpbzoyfhhery.supabase.co/storage/v1/object/public/app-updates/v7/production/windows/Setup-Gestao-Comercial-Real-v7.0.35-212.exe",
+      "size": 39491072,
+      "sha256": "50a278b411a820b72511fb7e2ae6b5742f035caa39a4ed1a9fada643c348106d"
+    },
+    {
+      "application": "gestao-comercial-v7",
+      "environment": "production",
+      "platform": "android",
+      "packageId": "pt.axelkleinsteuber.gestaocomercial",
+      "name": "Gestao-Comercial-V7-Real-Android-7.0.35-212.apk",
+      "url": "https://xfslinagzpbzoyfhhery.supabase.co/storage/v1/object/public/app-updates/v7/production/android/Gestao-Comercial-V7-Real-Android-7.0.35-212.apk",
+      "size": 49771319,
+      "sha256": "c6e6feb098cf365edc3b5889b62f453753b8a95111210dacd0ea21c7bce0a814"
+    }
+  ]
+}
+
