@@ -1,0 +1,15 @@
+{
+  "schema": 1,
+  "application": "portal-encomendas",
+  "environment": "production",
+  "platform": "android",
+  "packageId": "pt.axelkleinsteuber.portal_encomendas",
+  "version": "0.1.17",
+  "build": 19,
+  "url": "https://github.com/axelgeral-alt/gestao-comercial-updates/releases/download/bootstrap-2026-10-26/Portal-de-Encomendas-Real-Android-v0.1.17-19.apk",
+  "sha256": "7172869e706e9a07bc15914bfc3ccf9bd01d7e042464d7e8eef1575de0067c62",
+  "size": 25722953,
+  "mandatory": false,
+  "notes": "Distribuição inicial espelhada no GitHub; a versão instalada mantém a verificação atual até à migração do canal."
+}
+
