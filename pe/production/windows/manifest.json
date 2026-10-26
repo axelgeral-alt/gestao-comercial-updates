@@ -1,0 +1,15 @@
+{
+  "schema": 1,
+  "application": "portal-encomendas",
+  "environment": "production",
+  "platform": "windows",
+  "packageId": "portal_encomendas",
+  "version": "0.1.17",
+  "build": 19,
+  "url": "https://github.com/axelgeral-alt/gestao-comercial-updates/releases/download/bootstrap-2026-10-26/Setup-Portal-de-Encomendas-Real-v0.1.17-19.exe",
+  "sha256": "19d5e7d57420c58acb57fe9a942ebd70a6a8c810f827c3b0f93ec20168b7681d",
+  "size": 38223360,
+  "mandatory": false,
+  "notes": "Distribuição inicial espelhada no GitHub; a versão instalada mantém a verificação atual até à migração do canal."
+}
+
