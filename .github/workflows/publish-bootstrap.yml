@@ -1,0 +1,66 @@
+name: Publish verified production update assets
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - migration/production-bootstrap.json
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out the pinned repository revision
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+
+      - name: Download and verify active production artifacts
+        shell: bash
+        run: |
+          set -euo pipefail
+          spec='migration/production-bootstrap.json'
+          jq -e '.tag and .title and (.assets | length == 4)' "$spec" >/dev/null
+
+          tag="$(jq -r '.tag' "$spec")"
+          [[ "$tag" =~ ^[A-Za-z0-9._-]+$ ]] || { echo 'Invalid release tag'; exit 1; }
+          if gh release view "$tag" --repo "$GITHUB_REPOSITORY" >/dev/null 2>&1; then
+            echo "Release $tag already exists; refusing to overwrite it."
+            exit 1
+          fi
+
+          mkdir -p dist
+          files=()
+          while IFS=$'\t' read -r application environment platform package_id name url size digest; do
+            [[ "$environment" == 'production' ]] || { echo "Invalid environment: $environment"; exit 1; }
+            [[ "$name" =~ ^[A-Za-z0-9._-]+$ ]] || { echo "Invalid asset name: $name"; exit 1; }
+            [[ "$size" =~ ^[0-9]+$ ]] || { echo "Invalid asset size: $size"; exit 1; }
+            [[ "$digest" =~ ^[a-fA-F0-9]{64}$ ]] || { echo "Invalid SHA-256 for $name"; exit 1; }
+
+            case "$application:$platform:$package_id:$url" in
+              portal-encomendas:windows:portal_encomendas:https://xfslinagzpbzoyfhhery.supabase.co/storage/v1/object/public/app-updates/pe/production/windows/*) ;;
+              portal-encomendas:android:pt.axelkleinsteuber.portal_encomendas:https://xfslinagzpbzoyfhhery.supabase.co/storage/v1/object/public/app-updates/pe/production/android/*) ;;
+              gestao-comercial-v7:windows:gestao_comercial:https://xfslinagzpbzoyfhhery.supabase.co/storage/v1/object/public/app-updates/v7/production/windows/*) ;;
+              gestao-comercial-v7:android:pt.axelkleinsteuber.gestaocomercial:https://xfslinagzpbzoyfhhery.supabase.co/storage/v1/object/public/app-updates/v7/production/android/*) ;;
+              *) echo "Unexpected application/platform/package/source for $name"; exit 1 ;;
+            esac
+
+            destination="dist/$name"
+            curl --fail --location --retry 3 --max-time 300 --output "$destination" "$url"
+            actual_size="$(stat --format=%s "$destination")"
+            [[ "$actual_size" == "$size" ]] || { echo "Size mismatch for $name: $actual_size != $size"; exit 1; }
+            printf '%s  %s\n' "$digest" "$destination" | sha256sum --check --status || { echo "SHA-256 mismatch for $name"; exit 1; }
+            files+=("$destination")
+          done < <(jq -r '.assets[] | [.application,.environment,.platform,.packageId,.name,.url,(.size|tostring),.sha256] | @tsv' "$spec")
+
+          [[ "${#files[@]}" -eq 4 ]] || { echo 'Expected exactly four verified assets'; exit 1; }
+          gh release create "$tag" "${files[@]}" \
+            --repo "$GITHUB_REPOSITORY" \
+            --target "$GITHUB_SHA" \
+            --title "$(jq -r '.title' "$spec")" \
+            --notes "Bootstrap migration: PE 0.1.17+19 and GC/V7 7.0.35+212. Each installer was checked against the active production manifest for exact byte size and SHA-256 before upload. No application source, customer data, database, or credential is included."
+        env:
+          GH_TOKEN: ${{ github.token }}
+
