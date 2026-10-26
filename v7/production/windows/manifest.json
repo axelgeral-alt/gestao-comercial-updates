@@ -1,0 +1,15 @@
+{
+  "schema": 1,
+  "application": "gestao-comercial-v7",
+  "environment": "production",
+  "platform": "windows",
+  "packageId": "gestao_comercial",
+  "version": "7.0.35",
+  "build": 212,
+  "url": "https://github.com/axelgeral-alt/gestao-comercial-updates/releases/download/bootstrap-2026-10-26/Setup-Gestao-Comercial-Real-v7.0.35-212.exe",
+  "sha256": "50a278b411a820b72511fb7e2ae6b5742f035caa39a4ed1a9fada643c348106d",
+  "size": 39491072,
+  "mandatory": false,
+  "notes": "Distribuição inicial espelhada no GitHub; a versão instalada mantém a verificação atual até à migração do canal."
+}
+
