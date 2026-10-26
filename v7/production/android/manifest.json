@@ -1,0 +1,15 @@
+{
+  "schema": 1,
+  "application": "gestao-comercial-v7",
+  "environment": "production",
+  "platform": "android",
+  "packageId": "pt.axelkleinsteuber.gestaocomercial",
+  "version": "7.0.35",
+  "build": 212,
+  "url": "https://github.com/axelgeral-alt/gestao-comercial-updates/releases/download/bootstrap-2026-10-26/Gestao-Comercial-V7-Real-Android-7.0.35-212.apk",
+  "sha256": "c6e6feb098cf365edc3b5889b62f453753b8a95111210dacd0ea21c7bce0a814",
+  "size": 49771319,
+  "mandatory": false,
+  "notes": "Distribuição inicial espelhada no GitHub; a versão instalada mantém a verificação atual até à migração do canal."
+}
+
