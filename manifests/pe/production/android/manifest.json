@@ -4,11 +4,11 @@
   "environment": "production",
   "platform": "android",
   "packageId": "pt.axelkleinsteuber.portal_encomendas",
-  "version": "0.1.19",
-  "build": 21,
-  "url": "https://github.com/axelgeral-alt/gestao-comercial-updates/releases/download/pe-real-042-2026-11-17/Portal-de-Encomendas-Real-Android-v0.1.19-21.apk",
-  "sha256": "9e1bd443044b50fe0c40bda607892c6691d9967a5fe753b352330fdbf36bd8e8",
-  "size": 25722953,
+  "version": "0.1.20",
+  "build": 22,
+  "url": "https://github.com/axelgeral-alt/gestao-comercial-updates/releases/download/pe-real-043-2026-11-17/Portal-de-Encomendas-Real-Android-v0.1.20-22.apk",
+  "sha256": "26815217aa6d9f3b5fdbbb7478217a6dd4ede27777b93b2a28ac4571f16bb76e",
+  "size": 70034231,
   "mandatory": false,
-  "notes": "PE Real 042: corrigida a valorização dos bónus na Packing List. As caixas continuam incluídas na preparação, mas as ofertas não aumentam o total a receber."
+  "notes": "PE Real 043: consultas de linhas de encomenda em lotes menores para evitar erro HTTP 400 ao carregar encomendas e histórico."
 }
