@@ -2,13 +2,13 @@
   "schema": 1,
   "application": "portal-encomendas",
   "environment": "production",
+  "version": "0.1.21",
+  "build": 23,
+  "sha256": "f63a72792e4639a15455209740dc92a2eb3b5a434684858305c34c8388dc7636",
+  "size": 38222848,
+  "mandatory": false,
+  "notes": "PE Real 044: atualização automática do módulo visível e sincronização acelerada ao regressar de outro ecrã.",
   "platform": "windows",
   "packageId": "portal_encomendas",
-  "version": "0.1.20",
-  "build": 22,
-  "url": "https://github.com/axelgeral-alt/gestao-comercial-updates/releases/download/pe-real-043-2026-11-17/Setup-Portal-de-Encomendas-Real-v0.1.20-22.exe",
-  "sha256": "5590af6dc175104cdad8c01ad8391ac7cc7ff31d158e301909f078b9d4e66136",
-  "size": 38221312,
-  "mandatory": false,
-  "notes": "PE Real 043: consultas de linhas de encomenda em lotes menores para evitar erro HTTP 400 ao carregar encomendas e histórico."
+  "url": "https://xfslinagzpbzoyfhhery.supabase.co/storage/v1/object/public/app-updates/pe/production/windows/Setup-Portal-de-Encomendas-Real-v0.1.21-23.exe"
 }
