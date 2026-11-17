@@ -4,11 +4,11 @@
   "environment": "production",
   "version": "0.1.21",
   "build": 23,
-  "sha256": "25234f4319cca33729870f92f0d32c79efb39413b27a44174f7d58112333f813",
-  "size": 25722957,
   "mandatory": false,
   "notes": "PE Real 044: atualização automática do módulo visível e sincronização acelerada ao regressar de outro ecrã.",
   "platform": "android",
   "packageId": "pt.axelkleinsteuber.portal_encomendas",
-  "url": "https://xfslinagzpbzoyfhhery.supabase.co/storage/v1/object/public/app-updates/pe/production/android/Portal-de-Encomendas-Real-Android-v0.1.21-23.apk"
+  "url": "https://github.com/axelgeral-alt/gestao-comercial-updates/releases/download/pe-real-044-2026-11-17/Portal-de-Encomendas-Real-Android-v0.1.21-23.apk",
+  "sha256": "25234f4319cca33729870f92f0d32c79efb39413b27a44174f7d58112333f813",
+  "size": 25722957
 }
