@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "application": "portal-encomendas",
+  "environment": "production",
+  "platform": "android",
+  "packageId": "pt.axelkleinsteuber.portal_encomendas",
+  "version": "0.1.19",
+  "build": 21,
+  "url": "https://github.com/axelgeral-alt/gestao-comercial-updates/releases/download/pe-real-042-2026-11-17/Portal-de-Encomendas-Real-Android-v0.1.19-21.apk",
+  "sha256": "9e1bd443044b50fe0c40bda607892c6691d9967a5fe753b352330fdbf36bd8e8",
+  "size": 25722953,
+  "mandatory": false,
+  "notes": "PE Real 042: corrigida a valorização dos bónus na Packing List. As caixas continuam incluídas na preparação, mas as ofertas não aumentam o total a receber."
+}
